@@ -61,7 +61,7 @@ if iscell(ground_truth) % Multiple ground truth
                 curr_gt = seg2gridbmap(ground_truth{ii});
                 
                 % compute the correspondence
-                [match1,match2] = correspondPixels(seg,curr_gt);
+                [match1,match2] = correspondPixels(seg,curr_gt,0.015);
                 
                 % accumulate machine matches
                 accP = accP | match1;
